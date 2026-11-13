@@ -21,6 +21,15 @@ Next.js (React, TypeScript), Tailwind CSS, Framer Motion, Spline 3D, Supabase, R
 - Contact form input is validated server-side.
 - Privacy-by-design: only the data needed to answer an enquiry is collected, with explicit consent.
 
+## Issues encountered & how I solved them
+- **3D and motion elements fighting page load speed** — a studio selling "fast, modern websites" can't itself be slow. I solved this by rendering pages server-side and lazy-loading the Spline 3D scenes and Framer Motion sequences so they only cost load time once they're actually in view.
+- **Legal pages for a South African audience had no off-the-shelf template.** I wrote the Privacy and Terms pages around POPIA and the ECT Act directly — lawful basis, retention periods, user rights and a named Information Officer — rather than reusing a generic international template that wouldn't hold up locally.
+- **Enquiry data needed to be captured without becoming a liability.** I limited the contact flow to only the fields needed to respond, added consent capture at the point of submission, and validated every input server-side rather than trusting the client.
+- **Proving the studio's own claims** — the only credible proof that I can build fast, distinctive sites is my own site passing that bar, so SEO and performance work (metadata, image optimisation, server rendering) were treated as a deliverable, not an afterthought.
+
+## Result
+A live, production site at stradastudio.co.za, in active use to win client work, combining motion and 3D with server-rendered performance and SA-compliant legal pages.
+
 ## About this repository
 This is a **showcase repository**. The production source is private. © Craig Chadley Johnson. All rights reserved. See [LICENSE](LICENSE).
 
